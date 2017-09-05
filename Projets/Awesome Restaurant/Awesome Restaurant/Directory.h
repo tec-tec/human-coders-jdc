@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Restaurant.h"
 
 @interface Directory : NSObject
+
+- (void)addRestaurant:(Restaurant *)resto;
+- (NSArray *)listRestaurants;
 
 @end
