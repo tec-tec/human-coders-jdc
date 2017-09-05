@@ -16,11 +16,25 @@
 
 @implementation Directory
 
-//- (NSArray *)listRestaurants {
-//    
-//}
+- (NSArray *)listRestaurantWithFilter:(nonnull NSString *)pattern {
+
+    if (pattern) {
+        // Filter the array
+        NSMutableArray * a = [NSMutableArray array];
+        [a addObject:pattern];
+        return a;
+    } else {
+        return [self listRestaurants];
+    }
+}
+
+- (NSArray *)listRestaurants {
+    return [NSArray arrayWithArray:self.restaurants];
+}
 
 - (void)addRestaurant:(Restaurant *)resto {
+    
+//    [self listRestaurantWithFilter:nil];
     
     [self.restaurants addObject:resto];
     NSLog(@"%@", self.restaurants);

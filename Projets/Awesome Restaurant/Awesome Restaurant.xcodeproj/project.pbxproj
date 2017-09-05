@@ -50,6 +50,7 @@
 			children = (
 				339BF4F51F5D94FC00BE6E37 /* Awesome Restaurant */,
 				339BF4F41F5D94FC00BE6E37 /* Products */,
+				339BF5151F5E941F00BE6E37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,10 +69,7 @@
 				339BF4F71F5D94FC00BE6E37 /* AppDelegate.m */,
 				339BF4F91F5D94FC00BE6E37 /* ViewController.h */,
 				339BF4FA1F5D94FC00BE6E37 /* ViewController.m */,
-				339BF50F1F5D96D600BE6E37 /* Restaurant.h */,
-				339BF5101F5D96D600BE6E37 /* Restaurant.m */,
-				339BF5121F5D9E1800BE6E37 /* Directory.h */,
-				339BF5131F5D9E1800BE6E37 /* Directory.m */,
+				339BF51A1F5E992900BE6E37 /* Models */,
 				339BF4FC1F5D94FC00BE6E37 /* Main.storyboard */,
 				339BF4FF1F5D94FC00BE6E37 /* Assets.xcassets */,
 				339BF5011F5D94FC00BE6E37 /* LaunchScreen.storyboard */,
@@ -79,6 +77,24 @@
 				339BF5051F5D94FC00BE6E37 /* main.m */,
 			);
 			path = "Awesome Restaurant";
+			sourceTree = "<group>";
+		};
+		339BF5151F5E941F00BE6E37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		339BF51A1F5E992900BE6E37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				339BF50F1F5D96D600BE6E37 /* Restaurant.h */,
+				339BF5101F5D96D600BE6E37 /* Restaurant.m */,
+				339BF5121F5D9E1800BE6E37 /* Directory.h */,
+				339BF5131F5D9E1800BE6E37 /* Directory.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +129,14 @@
 					339BF4F21F5D94FC00BE6E37 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -290,12 +314,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Awesome Restaurant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.tectec.Awesome-Restaurant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -304,12 +332,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "Awesome Restaurant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.tectec.Awesome-Restaurant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
