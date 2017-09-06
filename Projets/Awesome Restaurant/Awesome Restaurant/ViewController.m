@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "Directory.h"
+#import "UIColor+ChartedColors.h"
+
 
 @interface ViewController ()
 
@@ -31,6 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    self.view.backgroundColor = [UIColor alertColor];
 }
 
 

@@ -16,6 +16,7 @@
 		339BF5111F5D96D600BE6E37 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF5101F5D96D600BE6E37 /* Restaurant.m */; };
 		339BF5141F5D9E1800BE6E37 /* Directory.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF5131F5D9E1800BE6E37 /* Directory.m */; };
 		339BF51E1F5FE7C800BE6E37 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF51D1F5FE7C800BE6E37 /* ListViewController.m */; };
+		339BF5211F6022F500BE6E37 /* UIColor+ChartedColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF5201F6022F500BE6E37 /* UIColor+ChartedColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		339BF5131F5D9E1800BE6E37 /* Directory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Directory.m; sourceTree = "<group>"; };
 		339BF51C1F5FE7C800BE6E37 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		339BF51D1F5FE7C800BE6E37 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		339BF51F1F6022F500BE6E37 /* UIColor+ChartedColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ChartedColors.h"; sourceTree = "<group>"; };
+		339BF5201F6022F500BE6E37 /* UIColor+ChartedColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ChartedColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				339BF5011F5D94FC00BE6E37 /* LaunchScreen.storyboard */,
 				339BF5041F5D94FC00BE6E37 /* Info.plist */,
 				339BF5051F5D94FC00BE6E37 /* main.m */,
+				339BF51F1F6022F500BE6E37 /* UIColor+ChartedColors.h */,
+				339BF5201F6022F500BE6E37 /* UIColor+ChartedColors.m */,
 			);
 			path = "Awesome Restaurant";
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				339BF51E1F5FE7C800BE6E37 /* ListViewController.m in Sources */,
 				339BF5061F5D94FC00BE6E37 /* main.m in Sources */,
 				339BF4F81F5D94FC00BE6E37 /* AppDelegate.m in Sources */,
+				339BF5211F6022F500BE6E37 /* UIColor+ChartedColors.m in Sources */,
 				339BF5141F5D9E1800BE6E37 /* Directory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
