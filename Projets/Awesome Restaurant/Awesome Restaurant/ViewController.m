@@ -7,8 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "Directory.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *styleTextField;
+@property (weak, nonatomic) IBOutlet UISlider *notationSlider;
+@property (weak, nonatomic) IBOutlet UISwitch *visitedSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *notationLabel;
+
+- (IBAction)visitedSwitchValueChanged:(UISwitch *)sender;
+- (IBAction)notationSliderValueChanged:(UISlider *)sender;
 
 @end
 
@@ -17,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 
@@ -45,4 +57,13 @@
     NSNumber *no = @(-1);
 }
 
+- (IBAction)visitedSwitchValueChanged:(UISwitch *)sender {
+
+    [self.notationSlider setEnabled: sender.isOn];
+}
+
+- (IBAction)notationSliderValueChanged:(UISlider *)sender {
+
+    self.notationLabel.text = @(roundf(sender.value)).stringValue;
+}
 @end
