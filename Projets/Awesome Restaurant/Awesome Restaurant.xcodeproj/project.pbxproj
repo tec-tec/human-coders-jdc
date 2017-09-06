@@ -15,6 +15,7 @@
 		339BF5061F5D94FC00BE6E37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF5051F5D94FC00BE6E37 /* main.m */; };
 		339BF5111F5D96D600BE6E37 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF5101F5D96D600BE6E37 /* Restaurant.m */; };
 		339BF5141F5D9E1800BE6E37 /* Directory.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF5131F5D9E1800BE6E37 /* Directory.m */; };
+		339BF51E1F5FE7C800BE6E37 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF51D1F5FE7C800BE6E37 /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		339BF5101F5D96D600BE6E37 /* Restaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		339BF5121F5D9E1800BE6E37 /* Directory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Directory.h; sourceTree = "<group>"; };
 		339BF5131F5D9E1800BE6E37 /* Directory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Directory.m; sourceTree = "<group>"; };
+		339BF51C1F5FE7C800BE6E37 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		339BF51D1F5FE7C800BE6E37 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				339BF4F71F5D94FC00BE6E37 /* AppDelegate.m */,
 				339BF4F91F5D94FC00BE6E37 /* ViewController.h */,
 				339BF4FA1F5D94FC00BE6E37 /* ViewController.m */,
+				339BF51C1F5FE7C800BE6E37 /* ListViewController.h */,
+				339BF51D1F5FE7C800BE6E37 /* ListViewController.m */,
 				339BF51A1F5E992900BE6E37 /* Models */,
 				339BF4FC1F5D94FC00BE6E37 /* Main.storyboard */,
 				339BF4FF1F5D94FC00BE6E37 /* Assets.xcassets */,
@@ -178,6 +183,7 @@
 			files = (
 				339BF5111F5D96D600BE6E37 /* Restaurant.m in Sources */,
 				339BF4FB1F5D94FC00BE6E37 /* ViewController.m in Sources */,
+				339BF51E1F5FE7C800BE6E37 /* ListViewController.m in Sources */,
 				339BF5061F5D94FC00BE6E37 /* main.m in Sources */,
 				339BF4F81F5D94FC00BE6E37 /* AppDelegate.m in Sources */,
 				339BF5141F5D9E1800BE6E37 /* Directory.m in Sources */,
