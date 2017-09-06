@@ -8,6 +8,18 @@
 
 #import "AppDelegate.h"
 
+@interface Human : NSObject
+
+@property (strong, nonatomic) Human *child;
+@property (strong, nonatomic) Human *father;
+
+@end
+
+@implementation Human
+
+@end
+
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +29,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//        for (int i = 0; i < 10000000; i++) {
+//            Human *h1 = [Human new];
+//            Human *h2 = [Human new];
+//
+//            h1.father = h2;
+//            h2.child = h1;
+//        }
+//    });
+
+
     return YES;
 }
 
