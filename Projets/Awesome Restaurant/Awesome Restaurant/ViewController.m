@@ -83,6 +83,8 @@
     newRestaurant.notation = [self roundedIntegerNotationValue];
 
     [self.directory addRestaurant:newRestaurant];
+
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (BOOL)isFormValid {
