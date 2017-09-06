@@ -17,9 +17,11 @@
 @property (weak, nonatomic) IBOutlet UISlider *notationSlider;
 @property (weak, nonatomic) IBOutlet UISwitch *visitedSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *notationLabel;
+@property (strong, nonnull, nonatomic) Directory *directory;
 
 - (IBAction)visitedSwitchValueChanged:(UISwitch *)sender;
 - (IBAction)notationSliderValueChanged:(UISlider *)sender;
+- (IBAction)save:(id)sender;
 
 @end
 
@@ -64,6 +66,48 @@
 
 - (IBAction)notationSliderValueChanged:(UISlider *)sender {
 
-    self.notationLabel.text = @(roundf(sender.value)).stringValue;
+    self.notationLabel.text = @([self roundedIntegerNotationValue]).stringValue;
+}
+
+- (IBAction)save:(id)sender {
+
+    if (![self isFormValid]) {
+        return;
+    }
+
+    Restaurant *newRestaurant = [[Restaurant alloc] initWithName:self.nameTextField.text address:self.addressTextField.text andStyle:self.styleTextField.text];
+    newRestaurant.alreadyVisited = self.visitedSwitch.isOn;
+    newRestaurant.notation = [self roundedIntegerNotationValue];
+
+    [self.directory addRestaurant:newRestaurant];
+}
+
+- (BOOL)isFormValid {
+
+    if (self.nameTextField.text.length < 2) {
+        return NO;
+    }
+
+    if (self.addressTextField.text.length < 2) {
+        return NO;
+    }
+
+    if (self.styleTextField.text.length < 2) {
+        return NO;
+    }
+
+    return YES;
+}
+
+- (NSInteger)roundedIntegerNotationValue {
+    return (NSInteger) roundf(self.notationSlider.value);
+}
+
+// Lazy instanciation de directory
+- (Directory *)directory {
+    if (!_directory) {
+        _directory = [[Directory alloc] init];
+    }
+    return  _directory;
 }
 @end
