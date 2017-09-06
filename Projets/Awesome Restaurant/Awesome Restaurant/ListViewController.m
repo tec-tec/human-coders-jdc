@@ -7,8 +7,11 @@
 //
 
 #import "ListViewController.h"
+#import "Directory.h"
 
-@interface ListViewController ()
+@interface ListViewController () <UITableViewDataSource>
+
+@property (strong, nonatomic) Directory *directory;
 
 @end
 
@@ -24,6 +27,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [[self.directory listRestaurants] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"restoCell" forIndexPath:indexPath];
+
+    Restaurant *currentResto = self.directory.listRestaurants[indexPath.row];
+    cell.textLabel.text = currentResto.name;
+    cell.detailTextLabel.text = currentResto.address;
+
+    return cell;
+}
+
 /*
 #pragma mark - Navigation
 
@@ -34,4 +52,13 @@
 }
 */
 
+- (Directory *)directory {
+    if (!_directory) {
+        _directory = [[Directory alloc] init];
+        [_directory addRestaurant:[Restaurant mcDonalds]];
+        [_directory addRestaurant:[Restaurant mcDonalds]];
+        [_directory addRestaurant:[Restaurant mcDonalds]];
+    }
+    return _directory;
+}
 @end
