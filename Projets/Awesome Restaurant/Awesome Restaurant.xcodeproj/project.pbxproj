@@ -73,18 +73,14 @@
 			children = (
 				339BF4F61F5D94FC00BE6E37 /* AppDelegate.h */,
 				339BF4F71F5D94FC00BE6E37 /* AppDelegate.m */,
-				339BF4F91F5D94FC00BE6E37 /* ViewController.h */,
-				339BF4FA1F5D94FC00BE6E37 /* ViewController.m */,
-				339BF51C1F5FE7C800BE6E37 /* ListViewController.h */,
-				339BF51D1F5FE7C800BE6E37 /* ListViewController.m */,
+				33C2DE3B1F604B3800EFC554 /* Categories */,
+				33C2DE3A1F604B2C00EFC554 /* Controllers */,
 				339BF51A1F5E992900BE6E37 /* Models */,
 				339BF4FC1F5D94FC00BE6E37 /* Main.storyboard */,
 				339BF4FF1F5D94FC00BE6E37 /* Assets.xcassets */,
 				339BF5011F5D94FC00BE6E37 /* LaunchScreen.storyboard */,
 				339BF5041F5D94FC00BE6E37 /* Info.plist */,
 				339BF5051F5D94FC00BE6E37 /* main.m */,
-				339BF51F1F6022F500BE6E37 /* UIColor+ChartedColors.h */,
-				339BF5201F6022F500BE6E37 /* UIColor+ChartedColors.m */,
 			);
 			path = "Awesome Restaurant";
 			sourceTree = "<group>";
@@ -105,6 +101,26 @@
 				339BF5131F5D9E1800BE6E37 /* Directory.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		33C2DE3A1F604B2C00EFC554 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				339BF4F91F5D94FC00BE6E37 /* ViewController.h */,
+				339BF4FA1F5D94FC00BE6E37 /* ViewController.m */,
+				339BF51C1F5FE7C800BE6E37 /* ListViewController.h */,
+				339BF51D1F5FE7C800BE6E37 /* ListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		33C2DE3B1F604B3800EFC554 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				339BF51F1F6022F500BE6E37 /* UIColor+ChartedColors.h */,
+				339BF5201F6022F500BE6E37 /* UIColor+ChartedColors.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
