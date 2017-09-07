@@ -19,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UISlider *notationSlider;
 @property (weak, nonatomic) IBOutlet UISwitch *visitedSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *notationLabel;
-@property (strong, nonnull, nonatomic) Directory *directory;
 
 - (IBAction)visitedSwitchValueChanged:(UISwitch *)sender;
 - (IBAction)notationSliderValueChanged:(UISlider *)sender;

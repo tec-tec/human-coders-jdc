@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Directory;
 
 @interface FormViewController : UIViewController
 
 @property (strong, nonatomic) UIColor *bgColor;
+@property (strong, nonnull, nonatomic) Directory *directory;
 
 @end
 

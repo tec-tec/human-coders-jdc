@@ -8,6 +8,7 @@
 
 #import "ListViewController.h"
 #import "Directory.h"
+#import "FormViewController.h"
 
 @interface ListViewController () <UITableViewDataSource>
 
@@ -28,7 +29,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    NSAssert(tableView != nil, @"Table view should be nil");
+
     return [[self.directory listRestaurants] count];
+
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -42,15 +48,23 @@
     return cell;
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+    //Ne pas faire passer de valeurs à des outlets !!! Jamais jamais
+    
+    if ([[segue identifier] isEqualToString:@"showDetails"]) {
+        NSLog(@"Segue details");
+
+    } else if ([[segue identifier] isEqualToString:@"showForm"]) {
+        FormViewController *vc = segue.destinationViewController;
+        vc.bgColor = [UIColor redColor];
+    }
+
 }
-*/
+
 
 - (Directory *)directory {
     if (!_directory) {
