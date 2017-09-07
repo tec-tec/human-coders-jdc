@@ -9,7 +9,7 @@
 #import "FormViewController.h"
 #import "Directory.h"
 #import "UIColor+ChartedColors.h"
-
+#import "ListViewController.h"
 
 @interface FormViewController ()
 
@@ -34,6 +34,11 @@
 
     if (self.bgColor) {
         self.view.backgroundColor = self.bgColor;
+    }
+
+    // Pour vérifier que le "delegate" implémente bienb la méthode
+    if ([[self previousScreen] respondsToSelector:@selector(formDisplayed)]) {
+        [self.previousScreen formDisplayed];
     }
 }
 

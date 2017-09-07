@@ -10,7 +10,7 @@
 #import "Directory.h"
 #import "FormViewController.h"
 
-@interface ListViewController () <UITableViewDataSource>
+@interface ListViewController () <UITableViewDataSource, FormPreviousScreen>
 
 @property (strong, nonatomic) Directory *directory;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -70,10 +70,14 @@
     } else if ([[segue identifier] isEqualToString:@"showForm"]) {
         FormViewController *vc = segue.destinationViewController;
         vc.directory = self.directory;
+        vc.previousScreen = self;
     }
 
 }
 
+- (void)formDisplayed {
+
+}
 
 - (Directory *)directory {
     if (!_directory) {

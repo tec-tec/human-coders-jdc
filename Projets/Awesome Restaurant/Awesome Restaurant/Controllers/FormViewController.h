@@ -7,12 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Directory;
+@class Directory, ListViewController;
+
+@protocol FormPreviousScreen <NSObject>
+
+@required
+- (void)formDisplayed;
+
+@end
 
 @interface FormViewController : UIViewController
 
 @property (strong, nonatomic) UIColor *bgColor;
-@property (strong, nonnull, nonatomic) Directory *directory;
+@property (strong, nonatomic) Directory *directory;
+
+@property (weak, nonatomic) id<FormPreviousScreen> previousScreen;
+
 
 @end
 
