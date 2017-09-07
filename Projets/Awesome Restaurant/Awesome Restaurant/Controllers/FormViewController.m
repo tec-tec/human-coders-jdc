@@ -6,12 +6,12 @@
 //  Copyright © 2017 Ludovic Ollagnier. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "FormViewController.h"
 #import "Directory.h"
 #import "UIColor+ChartedColors.h"
 
 
-@interface ViewController ()
+@interface FormViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
@@ -27,13 +27,15 @@
 
 @end
 
-@implementation ViewController
+@implementation FormViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    self.view.backgroundColor = [UIColor alertColor];
+    if (self.bgColor) {
+        self.view.backgroundColor = self.bgColor;
+    }
 }
 
 
