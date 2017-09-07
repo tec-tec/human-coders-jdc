@@ -13,6 +13,7 @@
 @interface ListViewController () <UITableViewDataSource>
 
 @property (strong, nonatomic) Directory *directory;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -21,6 +22,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    NSNotificationCenter *notCenter = [NSNotificationCenter defaultCenter];
+
+    [notCenter addObserver:self selector:@selector(dataUpdated) name:@"ModelUpdated" object:self.directory];
+}
+
+- (void)dataUpdated {
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,7 +69,7 @@
 
     } else if ([[segue identifier] isEqualToString:@"showForm"]) {
         FormViewController *vc = segue.destinationViewController;
-        vc.bgColor = [UIColor redColor];
+        vc.directory = self.directory;
     }
 
 }

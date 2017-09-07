@@ -38,6 +38,9 @@
     
     [self.restaurants addObject:resto];
     NSLog(@"%@", self.restaurants);
+
+    NSNotificationCenter *notCenter = [NSNotificationCenter defaultCenter];
+    [notCenter postNotificationName:@"ModelUpdated" object:nil];
 }
 
 // Redéfinition du getter pour faire de la lazy instanciation
