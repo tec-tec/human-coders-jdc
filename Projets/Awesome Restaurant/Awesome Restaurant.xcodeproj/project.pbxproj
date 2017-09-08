@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		334A97BB1F629335008EB010 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 334A97BA1F629335008EB010 /* CloudKit.framework */; };
 		338D51CF1F62E387002310C8 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 338D51CE1F62E387002310C8 /* CoreDataManager.m */; };
+		338D51D21F62E451002310C8 /* Restaurants.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 338D51D01F62E451002310C8 /* Restaurants.xcdatamodeld */; };
 		339BF4F81F5D94FC00BE6E37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF4F71F5D94FC00BE6E37 /* AppDelegate.m */; };
 		339BF4FB1F5D94FC00BE6E37 /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339BF4FA1F5D94FC00BE6E37 /* FormViewController.m */; };
 		339BF4FE1F5D94FC00BE6E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339BF4FC1F5D94FC00BE6E37 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		334A97BA1F629335008EB010 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		338D51CD1F62E387002310C8 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		338D51CE1F62E387002310C8 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		338D51D11F62E451002310C8 /* Restaurants.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Restaurants.xcdatamodel; sourceTree = "<group>"; };
 		339BF4F31F5D94FC00BE6E37 /* Awesome Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome Restaurant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		339BF4F61F5D94FC00BE6E37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		339BF4F71F5D94FC00BE6E37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				339BF5131F5D9E1800BE6E37 /* Directory.m */,
 				338D51CD1F62E387002310C8 /* CoreDataManager.h */,
 				338D51CE1F62E387002310C8 /* CoreDataManager.m */,
+				338D51D01F62E451002310C8 /* Restaurants.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				338D51CF1F62E387002310C8 /* CoreDataManager.m in Sources */,
 				339BF51E1F5FE7C800BE6E37 /* ListViewController.m in Sources */,
 				339BF5061F5D94FC00BE6E37 /* main.m in Sources */,
+				338D51D21F62E451002310C8 /* Restaurants.xcdatamodeld in Sources */,
 				339BF4F81F5D94FC00BE6E37 /* AppDelegate.m in Sources */,
 				339BF5211F6022F500BE6E37 /* UIColor+ChartedColors.m in Sources */,
 				339BF5141F5D9E1800BE6E37 /* Directory.m in Sources */,
@@ -413,6 +417,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		338D51D01F62E451002310C8 /* Restaurants.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				338D51D11F62E451002310C8 /* Restaurants.xcdatamodel */,
+			);
+			currentVersion = 338D51D11F62E451002310C8 /* Restaurants.xcdatamodel */;
+			path = Restaurants.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 339BF4EB1F5D94FC00BE6E37 /* Project object */;
 }
