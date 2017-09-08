@@ -32,6 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
+    [self variousExamples];
+    
     if (self.bgColor) {
         self.view.backgroundColor = self.bgColor;
     }
@@ -49,7 +51,26 @@
 }
 
 - (void)variousExamples {
-    
+
+
+    NSFileManager *fm = [NSFileManager defaultManager];
+
+    NSURL *documentFolderUrl = [[fm URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    documentFolderUrl = [documentFolderUrl URLByAppendingPathComponent:@"photo" isDirectory:YES];
+    documentFolderUrl = [documentFolderUrl URLByAppendingPathComponent:@"maPhoto"];
+    documentFolderUrl = [documentFolderUrl URLByAppendingPathExtension:@"jpg"];
+
+    NSLog(@"%@", documentFolderUrl);
+
+    NSData * data = [NSData new];
+    [data writeToURL:documentFolderUrl atomically:YES];
+
+    NSData * readData = [[NSData alloc] initWithContentsOfURL:documentFolderUrl];
+
+
+
+
+
     //Dictionnary examples
     NSMutableDictionary *dict2 = [@{@"firstName":@"Ludovic", @"lastName": @"Ollagnier"} mutableCopy];
     NSString *fName2 = dict2[@"firstName"];
