@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Restaurant : NSObject
+@interface RestaurantOld : NSObject
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *address;
@@ -19,6 +19,6 @@
 - (instancetype)initWithName:(NSString *)name address: (NSString *) address andStyle: (NSString *)style;
 - (void)open;
 - (void)close;
-+ (Restaurant*)mcDonalds;
++ (RestaurantOld*)mcDonalds;
 
 @end
