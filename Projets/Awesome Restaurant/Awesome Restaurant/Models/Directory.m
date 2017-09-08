@@ -8,10 +8,9 @@
 
 #import "Directory.h"
 #import "Restaurant+CoreDataProperties.h"
+#import "CoreDataManager.h"
 
 @interface Directory ()
-
-@property (strong, nonatomic) NSMutableArray <Restaurant *> *restaurants;
 
 @end
 
@@ -30,28 +29,32 @@
 }
 
 - (NSArray *)listRestaurants {
-    return [NSArray arrayWithArray:self.restaurants];
+    NSFetchRequest *fetchReq = [Restaurant fetchRequest];
+    NSManagedObjectContext *context = [[[CoreDataManager sharedManager] persistentContainer] viewContext];
+
+    return [context executeFetchRequest:fetchReq error:nil];
 }
 
 - (void)addRestaurant:(Restaurant *)resto {
-    
+
+    NSManagedObjectContext *context = [[[CoreDataManager sharedManager] persistentContainer] viewContext];
 //    [self listRestaurantWithFilter:nil];
     
-    [self.restaurants addObject:resto];
-    NSLog(@"%@", self.restaurants);
-
-    NSNotificationCenter *notCenter = [NSNotificationCenter defaultCenter];
-    [notCenter postNotificationName:@"ModelUpdated" object:nil];
+//    [self.restaurants addObject:resto];
+//    NSLog(@"%@", self.restaurants);
+//
+//    NSNotificationCenter *notCenter = [NSNotificationCenter defaultCenter];
+//    [notCenter postNotificationName:@"ModelUpdated" object:nil];
 }
 
 // Redéfinition du getter pour faire de la lazy instanciation
 // On check si l'objet existe, et sinon on le retourne pour être certain de ne jamais oublier de l'initilaiser.
-- (NSMutableArray<Restaurant *> *)restaurants {
-    
-    if (_restaurants == nil) {
-        _restaurants = [[NSMutableArray alloc] init];
-    }
-    
-    return _restaurants;
-}
+//- (NSMutableArray<Restaurant *> *)restaurants {
+//
+//    if (_restaurants == nil) {
+//        _restaurants = [[NSMutableArray alloc] init];
+//    }
+//
+//    return _restaurants;
+//}
 @end
