@@ -15,6 +15,12 @@
 		334A97D81F629E45008EB010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 334A97D61F629E45008EB010 /* LaunchScreen.storyboard */; };
 		334A97DB1F629E46008EB010 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 334A97DA1F629E46008EB010 /* main.m */; };
 		334A97E31F62A426008EB010 /* CoreDatamanager.m in Sources */ = {isa = PBXBuildFile; fileRef = 334A97E21F62A426008EB010 /* CoreDatamanager.m */; };
+		334A97F01F62A756008EB010 /* Author+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 334A97E61F62A756008EB010 /* Author+CoreDataClass.m */; };
+		334A97F11F62A756008EB010 /* Author+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 334A97E71F62A756008EB010 /* Author+CoreDataProperties.m */; };
+		334A97F21F62A756008EB010 /* Book+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 334A97EA1F62A756008EB010 /* Book+CoreDataClass.m */; };
+		334A97F31F62A756008EB010 /* Book+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 334A97EB1F62A756008EB010 /* Book+CoreDataProperties.m */; };
+		334A97F41F62A756008EB010 /* Editor+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 334A97EE1F62A756008EB010 /* Editor+CoreDataClass.m */; };
+		334A97F51F62A756008EB010 /* Editor+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 334A97EF1F62A756008EB010 /* Editor+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,18 @@
 		334A97DA1F629E46008EB010 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		334A97E11F62A426008EB010 /* CoreDatamanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDatamanager.h; sourceTree = "<group>"; };
 		334A97E21F62A426008EB010 /* CoreDatamanager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDatamanager.m; sourceTree = "<group>"; };
+		334A97E51F62A756008EB010 /* Author+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Author+CoreDataClass.h"; sourceTree = "<group>"; };
+		334A97E61F62A756008EB010 /* Author+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Author+CoreDataClass.m"; sourceTree = "<group>"; };
+		334A97E71F62A756008EB010 /* Author+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Author+CoreDataProperties.m"; sourceTree = "<group>"; };
+		334A97E81F62A756008EB010 /* Book+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Book+CoreDataProperties.h"; sourceTree = "<group>"; };
+		334A97E91F62A756008EB010 /* Book+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Book+CoreDataClass.h"; sourceTree = "<group>"; };
+		334A97EA1F62A756008EB010 /* Book+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Book+CoreDataClass.m"; sourceTree = "<group>"; };
+		334A97EB1F62A756008EB010 /* Book+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Book+CoreDataProperties.m"; sourceTree = "<group>"; };
+		334A97EC1F62A756008EB010 /* Editor+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Editor+CoreDataProperties.h"; sourceTree = "<group>"; };
+		334A97ED1F62A756008EB010 /* Editor+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Editor+CoreDataClass.h"; sourceTree = "<group>"; };
+		334A97EE1F62A756008EB010 /* Editor+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Editor+CoreDataClass.m"; sourceTree = "<group>"; };
+		334A97EF1F62A756008EB010 /* Editor+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Editor+CoreDataProperties.m"; sourceTree = "<group>"; };
+		338D51CC1F62CBDB002310C8 /* Author+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Author+CoreDataProperties.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +88,7 @@
 				334A97CB1F629E45008EB010 /* ViewController.h */,
 				334A97CC1F629E45008EB010 /* ViewController.m */,
 				334A97CE1F629E45008EB010 /* Main.storyboard */,
+				334A97F61F62CB83008EB010 /* CoreData Models */,
 				334A97D41F629E45008EB010 /* Assets.xcassets */,
 				334A97D61F629E45008EB010 /* LaunchScreen.storyboard */,
 				334A97D91F629E46008EB010 /* Info.plist */,
@@ -77,6 +96,25 @@
 				334A97D11F629E45008EB010 /* Core_Data_Demo.xcdatamodeld */,
 			);
 			path = "Core Data Demo";
+			sourceTree = "<group>";
+		};
+		334A97F61F62CB83008EB010 /* CoreData Models */ = {
+			isa = PBXGroup;
+			children = (
+				334A97E51F62A756008EB010 /* Author+CoreDataClass.h */,
+				334A97E61F62A756008EB010 /* Author+CoreDataClass.m */,
+				338D51CC1F62CBDB002310C8 /* Author+CoreDataProperties.h */,
+				334A97E91F62A756008EB010 /* Book+CoreDataClass.h */,
+				334A97EC1F62A756008EB010 /* Editor+CoreDataProperties.h */,
+				334A97ED1F62A756008EB010 /* Editor+CoreDataClass.h */,
+				334A97EF1F62A756008EB010 /* Editor+CoreDataProperties.m */,
+				334A97E71F62A756008EB010 /* Author+CoreDataProperties.m */,
+				334A97E81F62A756008EB010 /* Book+CoreDataProperties.h */,
+				334A97EA1F62A756008EB010 /* Book+CoreDataClass.m */,
+				334A97EB1F62A756008EB010 /* Book+CoreDataProperties.m */,
+				334A97EE1F62A756008EB010 /* Editor+CoreDataClass.m */,
+			);
+			path = "CoreData Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,10 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				334A97F01F62A756008EB010 /* Author+CoreDataClass.m in Sources */,
 				334A97E31F62A426008EB010 /* CoreDatamanager.m in Sources */,
+				334A97F41F62A756008EB010 /* Editor+CoreDataClass.m in Sources */,
+				334A97F31F62A756008EB010 /* Book+CoreDataProperties.m in Sources */,
 				334A97CD1F629E45008EB010 /* ViewController.m in Sources */,
 				334A97D31F629E45008EB010 /* Core_Data_Demo.xcdatamodeld in Sources */,
 				334A97DB1F629E46008EB010 /* main.m in Sources */,
+				334A97F51F62A756008EB010 /* Editor+CoreDataProperties.m in Sources */,
+				334A97F11F62A756008EB010 /* Author+CoreDataProperties.m in Sources */,
+				334A97F21F62A756008EB010 /* Book+CoreDataClass.m in Sources */,
 				334A97CA1F629E45008EB010 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
