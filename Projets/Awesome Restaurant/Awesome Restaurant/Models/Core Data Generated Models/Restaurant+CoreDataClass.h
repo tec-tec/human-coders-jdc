@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Restaurant : NSManagedObject
 
++ (Restaurant*)mcDonalds;
++ (Restaurant *)mcDonaldsWithContext:(NSManagedObjectContext*)context;
+
+- (instancetype)initWithName:(NSString *)name address: (NSString *) address andStyle: (NSString *)style;
+- (instancetype)initWithName:(NSString *)name address: (NSString *) address andStyle: (NSString *)style inContext: (NSManagedObjectContext*)context;
+
 @end
 
 NS_ASSUME_NONNULL_END

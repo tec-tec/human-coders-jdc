@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Restaurant.h"
+#import "Restaurant+CoreDataProperties.h"
 
 @interface Directory : NSObject
 

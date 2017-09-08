@@ -7,6 +7,7 @@
 //
 
 #import "Directory.h"
+#import "Restaurant+CoreDataProperties.h"
 
 @interface Directory ()
 
