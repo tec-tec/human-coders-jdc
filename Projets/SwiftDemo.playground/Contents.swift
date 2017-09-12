@@ -124,6 +124,68 @@ func optionnalReturn(x: Int) -> Int? {
     return x
 }
 
+class Animal {
+    var name: String
+    var age: Int
+
+    init(name: String = "Médor", age: Int = 0) {
+        self.name = name
+        self.age = age
+    }
+}
+
+class Dog: Animal {
+
+    var owner: String
+
+    override init(name: String = "Médor", age: Int = 0) {
+        owner = "Personne"
+        super.init(name: name, age: age)
+
+    }
+
+    init(name: String = "Médor", age: Int = 0, owner: String) {
+        self.owner = owner
+        super.init(name: name, age: age)
+    }
+    func aboie() {
+
+    }
+}
+
+struct Cat {
+    var name = "Félix"
+    var age = 0
+}
+
+
+let aDog = Dog()
+//aDog = Dog()
+let aDog2 = aDog
+aDog.age = 5
+aDog.name
+aDog.age
+aDog2.age
+
+var aCat = Cat()
+let aCat2 = aCat
+aCat.name
+aCat.age = 5
+let cat3 = aCat
+aCat.age
+aCat2.age
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
