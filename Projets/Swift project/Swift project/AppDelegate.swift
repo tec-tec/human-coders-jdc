@@ -17,6 +17,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let context = persistentContainer.viewContext
+        let request: NSFetchRequest = Restaurant.fetchRequest()
+
+        let result = try! context.fetch(request)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         return true
     }
 
