@@ -193,6 +193,26 @@ aCat2.age
 aCat.humanAge
 aCat.age
 
+private final class PrivateStruct {
+
+    private var name: String = "toto"
+    var age: Int = 0
+
+    func internalMethod() {
+
+    }
+
+    fileprivate func doSomething() {
+
+    }
+}
+
+private let testPrivate = PrivateStruct()
+testPrivate.age
+
+private class X: PrivateStruct {
+
+}
 
 
 
