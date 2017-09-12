@@ -154,8 +154,24 @@ class Dog: Animal {
 }
 
 struct Cat {
-    var name = "Félix"
-    var age = 0
+    lazy var name = "Félix"
+    var age: Int = 0 {
+        //Observers
+        willSet {
+            newValue
+            age
+        }
+
+        didSet {
+            oldValue
+            age
+        }
+    }
+
+    //Computed properties
+    var humanAge: Int {
+        return age * 7
+    }
 }
 
 
@@ -174,6 +190,10 @@ aCat.age = 5
 let cat3 = aCat
 aCat.age
 aCat2.age
+aCat.humanAge
+aCat.age
+
+
 
 
 
