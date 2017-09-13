@@ -21,8 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let context = persistentContainer.viewContext
         let request: NSFetchRequest = Restaurant.fetchRequest()
 
-        let result = try! context.fetch(request)
-
+        do {
+            let result = try context.fetch(request)
+        } catch {
+            print(error.localizedDescription)
+        }
 
 
 
