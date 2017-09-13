@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     //MARK: Public vars
 
     //MARK: Private vars
-
+    private var test = 0
 
     //MARK: - Lifecycle
 
@@ -32,6 +32,20 @@ class ViewController: UIViewController {
     //MARK: - Public methods
 
     //MARK: - Private methods
+}
+
+extension ViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return test
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+extension ViewController: UITableViewDelegate {
 
 }
 
