@@ -318,9 +318,141 @@ unOptionnel = .qqChose(truc: 5)
 unOptionnel&!
 //unOptionnel.deballe()
 
+enum FormError: Error {
+    case notSet
+    case notEnoughCharacter(tf: UITextField)
+}
+
+func somethingThatThrows(shouldThrow: Bool) throws -> Int {
+    if shouldThrow {
+        throw FormError.notSet
+    } else {
+        return 10
+    }
+}
+
+func aMethod() throws {
+    try somethingThatThrows(shouldThrow: true)
+}
+
+do {
+    try aMethod()
+} catch FormError.notEnoughCharacter(let tf) {
+    tf.backgroundColor = UIColor.red
+} catch FormError.notSet {
+
+} catch {
+
+}
+
+if let result = try? somethingThatThrows(shouldThrow: false) {
+
+}
+
+let result2 = try! somethingThatThrows(shouldThrow: false)
 
 
+enum EditState {
+    case isEditing, isDisplaying
+}
 
+struct DisplayControlelr {
+
+    var displayMode: EditState {
+        didSet {
+            switch displayMode {
+            case .isEditing:
+                print("Show edit UI")
+            case .isDisplaying:
+                print("Show display UI")
+            }
+        }
+    }
+}
+
+var controller = DisplayControlelr(displayMode: .isEditing)
+controller.displayMode = .isDisplaying
+
+class Client {
+    let name: String
+    var card: CreditCard?
+    init(name: String) {
+        self.name = name
+    }
+
+    deinit{
+        print("\(name) is being deinitialized")
+    }
+}
+
+class CreditCard {
+    let number: UInt
+    unowned let client: Client
+    init(number: UInt, client: Client) {
+        self.number = number
+        self.client = client
+        print("Card number \(number) is being initialized")
+    }
+
+    deinit{
+        print("Card number \(number) is being deinitialized")
+    }
+}
+
+var paul: Client? = Client(name: "Paul")
+let card = CreditCard(number: 1234_5678_90, client: paul!)
+paul?.card = card
+
+paul = nil
+//card.client
+
+protocol Flying {
+    func fly()
+    var maxFlyingDistance: Int { get }
+}
+
+extension Flying {
+
+    func fly() {
+        print("I'm flying")
+    }
+
+    var maxFlyingDistance: Int {
+        return 0
+    }
+}
+
+extension Cat: Flying {
+    func fly() {
+        print("I'm a flying cat. I can fly for \(maxFlyingDistance)m.")
+    }
+
+    var maxFlyingDistance: Int {
+        return 20 - age
+    }
+}
+
+extension Dog: Flying {
+    func fly() {
+        print("I'm a flying dog. I can fly for \(maxFlyingDistance)m.")
+    }
+
+    var maxFlyingDistance: Int {
+        return 10 - age
+    }
+}
+
+let flyingArray: [Flying] = [aDog, aCat, aDog2]
+
+for trucVolant in flyingArray {
+
+}
+
+extension Client: Flying {
+
+}
+
+paul?.fly()
 
 
 
