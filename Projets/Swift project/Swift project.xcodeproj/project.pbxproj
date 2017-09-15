@@ -11,6 +11,7 @@
 		335612B81F6972750093CC9C /* MyCustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335612B71F6972740093CC9C /* MyCustomCollectionViewCell.swift */; };
 		335612BB1F69729E0093CC9C /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335612B91F69729E0093CC9C /* RestaurantCollectionViewCell.swift */; };
 		335612BC1F69729E0093CC9C /* RestaurantCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 335612BA1F69729E0093CC9C /* RestaurantCollectionViewCell.xib */; };
+		335612BE1F6AD1540093CC9C /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335612BD1F6AD1540093CC9C /* AnimationsViewController.swift */; };
 		33DB89701F66E16E00EF322D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB896F1F66E16E00EF322D /* AppDelegate.swift */; };
 		33DB89721F66E16E00EF322D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DB89711F66E16E00EF322D /* ViewController.swift */; };
 		33DB89751F66E16E00EF322D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33DB89731F66E16E00EF322D /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		335612B71F6972740093CC9C /* MyCustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		335612B91F69729E0093CC9C /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
 		335612BA1F69729E0093CC9C /* RestaurantCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCollectionViewCell.xib; sourceTree = "<group>"; };
+		335612BD1F6AD1540093CC9C /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
 		33DB896C1F66E16E00EF322D /* Swift project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DB896F1F66E16E00EF322D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33DB89711F66E16E00EF322D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				33DB896F1F66E16E00EF322D /* AppDelegate.swift */,
 				33DB89711F66E16E00EF322D /* ViewController.swift */,
 				33DB89731F66E16E00EF322D /* Main.storyboard */,
+				335612BD1F6AD1540093CC9C /* AnimationsViewController.swift */,
 				335612B91F69729E0093CC9C /* RestaurantCollectionViewCell.swift */,
 				335612BA1F69729E0093CC9C /* RestaurantCollectionViewCell.xib */,
 				335612B71F6972740093CC9C /* MyCustomCollectionViewCell.swift */,
@@ -161,6 +164,7 @@
 				33DB89781F66E16E00EF322D /* Swift_project.xcdatamodeld in Sources */,
 				335612BB1F69729E0093CC9C /* RestaurantCollectionViewCell.swift in Sources */,
 				335612B81F6972750093CC9C /* MyCustomCollectionViewCell.swift in Sources */,
+				335612BE1F6AD1540093CC9C /* AnimationsViewController.swift in Sources */,
 				33DB89721F66E16E00EF322D /* ViewController.swift in Sources */,
 				33DB89861F68049B00EF322D /* Restaurant+CoreDataClass.swift in Sources */,
 				335612B61F696E130093CC9C /* RestaurantsCollectionViewController.swift in Sources */,

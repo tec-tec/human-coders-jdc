@@ -45,5 +45,10 @@
 	<string>Ben pour te voir</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Ben pour t&apos;écouter</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

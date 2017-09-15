@@ -35,7 +35,6 @@ class ViewController: UIViewController {
 
     @IBAction func async(_ sender: Any) {
 
-
     }
 
     @IBAction func authenticateUser(_ sender: Any) {
