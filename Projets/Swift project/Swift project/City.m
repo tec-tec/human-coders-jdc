@@ -39,4 +39,9 @@
 
     NSLog(@"%@", q.name);
 }
+
+- (BOOL)removeItemAtURL:(NSURL*)url error:(NSError **)error {
+
+    return YES;
+}
 @end

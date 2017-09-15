@@ -24,5 +24,8 @@ typedef NS_ENUM(NSUInteger, VilleFleurie) {
 @property (nonatomic) VilleFleurie flowerPower;
 
 - (instancetype)initWithName:(NSString *)name habitants:(NSInteger)hab quartier:(nullable NSArray<NSString *>*)quartiers;
+
+- (BOOL)removeItemAtURL:(NSURL*)url error:(NSError **)error;
+
 @end
 NS_ASSUME_NONNULL_END

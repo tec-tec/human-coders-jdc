@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         let maVile = City(name: "Paris", habitants: 3, quartier: nil)
         title = maVile.nom.uppercased()
         maVile.flowerPower = .uneFleur
+//        try? maVile.removeItem(at: URL())
     }
 
     override func didReceiveMemoryWarning() {
