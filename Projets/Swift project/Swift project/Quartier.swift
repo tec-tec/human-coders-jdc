@@ -12,12 +12,12 @@ import Foundation
     case horrible, bof, pasMal, genial
 }
 
-class Quartier: NSObject {
+@objcMembers class Quartier: NSObject {
 
-    @objc var name: String
+    var name: String
     var sympa: Agreabilité
 
-    @objc init(name: String, sympa: Agreabilité) {
+    init(name: String, sympa: Agreabilité) {
         self.name = name
         self.sympa = sympa
     }
