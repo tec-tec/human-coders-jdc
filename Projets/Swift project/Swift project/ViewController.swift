@@ -24,6 +24,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        let maVile = City(name: "Paris", habitants: 3, quartier: nil)
+        title = maVile.nom.uppercased()
+        maVile.flowerPower = .uneFleur
     }
 
     override func didReceiveMemoryWarning() {
