@@ -454,11 +454,27 @@ extension Client: Flying {
 
 paul?.fly()
 
+struct Restaurant: Codable {
 
+    var name: String
+    var address: String
+    var note: Int
 
+    var isVisited: Bool
+    var lastVisit: Date?
+}
 
+let mcDo = Restaurant(name: "McDo", address: "Somewhre", note: 2, isVisited: true, lastVisit: nil)
+let mcDo2 = Restaurant(name: "McDo2", address: "Somewhre", note: 2, isVisited: true, lastVisit: Date())
 
+let allRestaurant = [mcDo, mcDo2]
 
+let encoder = JSONEncoder()
+let encodedData = try? encoder.encode(allRestaurant)
+print(String(data: encodedData!, encoding: .utf8)!)
+
+let restos = try? JSONDecoder().decode([Restaurant].self, from: encodedData!)
+print(restos!)
 
 
 
